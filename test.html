@@ -1,0 +1,1124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hoang Vu Minh — AI & RAG Specialist Portfolio</title>
+  <meta name="description" content="Senior AI Developer specializing in Retrieval-Augmented Generation (RAG) systems. Building intelligent chatbots that transform enterprise knowledge into conversational AI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { 
+      --primary: #0f172a; 
+      --accent: #3b82f6; 
+      --accent-hover: #2563eb;
+      --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --glass: rgba(255,255,255,0.1);
+    }
+    html { scroll-behavior: smooth; }
+    body { 
+      font-family: 'Inter', system-ui, sans-serif; 
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    }
+    .glass { 
+      background: rgba(255,255,255,0.85); 
+      backdrop-filter: blur(12px); 
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .glass-dark { 
+      background: rgba(15,23,42,0.85); 
+      backdrop-filter: blur(12px); 
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .card { 
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
+      transition: all 0.3s ease;
+    }
+    .card:hover { 
+      transform: translateY(-5px); 
+      box-shadow: 0 30px 60px rgba(0,0,0,0.15); 
+    }
+    .gradient-text { 
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6); 
+      -webkit-background-clip: text; 
+      -webkit-text-fill-color: transparent; 
+    }
+    .hero-bg {
+      background: 
+        radial-gradient(circle at 20% 50%, rgba(59,130,246,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(139,92,246,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, rgba(236,72,153,0.1) 0%, transparent 50%);
+    }
+    .animate-float { animation: float 6s ease-in-out infinite; }
+    @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+    
+    .code-block {
+      font-family: 'JetBrains Mono', monospace;
+      background: #1e293b;
+      color: #e2e8f0;
+      border-radius: 12px;
+      padding: 1rem;
+      font-size: 0.875rem;
+      line-height: 1.6;
+    }
+    .typing-animation::after {
+      content: '|';
+      animation: blink 1s infinite;
+    }
+    @keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
+    
+    .metric-card { 
+      background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(139,92,246,0.1));
+      border: 1px solid rgba(59,130,246,0.2);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+  <!-- Header / Nav -->
+  <header class="fixed top-0 w-full z-50 glass border-b border-white/20">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#home" class="font-black text-2xl tracking-tight">
+        Minh<span class="gradient-text">AI</span>
+        <span class="ml-2 text-xs font-medium bg-blue-100 text-blue-800 px-2 py-1 rounded-full">RAG Specialist</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="#expertise" class="hover:text-blue-600 transition-colors">Expertise</a>
+        <a href="#projects" class="hover:text-blue-600 transition-colors">Projects</a>
+        <a href="#process" class="hover:text-blue-600 transition-colors">Process</a>
+        <a href="#metrics" class="hover:text-blue-600 transition-colors">Impact</a>
+        <a href="#contact" class="hover:text-blue-600 transition-colors">Contact</a>
+      </nav>
+      <a href="#contact" class="hidden md:inline-flex bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2.5 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+        Hire Me
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative overflow-hidden hero-bg min-h-screen flex items-center">
+    <div class="max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <div class="inline-flex items-center gap-3 text-sm font-semibold text-blue-700 bg-blue-50 rounded-full px-4 py-2 mb-6">
+          <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+          Available for Enterprise Projects
+        </div>
+        <h1 class="text-5xl lg:text-7xl font-black leading-tight mb-6">
+          <span class="block">AI Developer</span>
+          <span class="gradient-text block">RAG Systems</span>
+          <span class="block text-3xl lg:text-4xl font-medium text-slate-600 mt-2">& Intelligent Chatbots</span>
+        </h1>
+        <p class="text-xl text-slate-600 leading-relaxed mb-8 max-w-2xl">
+          I architect enterprise-grade RAG pipelines that transform your knowledge base into intelligent conversational AI. 
+          <strong class="text-slate-900">95% accuracy</strong> on domain-specific queries with 
+          <strong class="text-slate-900">sub-second response times</strong>.
+        </p>
+        
+        <!-- Key Metrics -->
+        <div class="grid grid-cols-3 gap-4 mb-8">
+          <div class="metric-card rounded-2xl p-4 text-center">
+            <div class="text-2xl font-black text-blue-600">+3</div>
+            <div class="text-sm text-slate-600">RAG Systems Built</div>
+          </div>
+          <div class="metric-card rounded-2xl p-4 text-center">
+            <div class="text-2xl font-black text-purple-600">95%</div>
+            <div class="text-sm text-slate-600">Query Accuracy</div>
+          </div>
+          <div class="metric-card rounded-2xl p-4 text-center">
+            <div class="text-2xl font-black text-pink-600">&lt;3s</div>
+            <div class="text-sm text-slate-600">Response Time</div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-4 mb-8">
+          <a href="#projects" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+            View Live Demos
+          </a>
+          <a href="#contact" class="glass px-8 py-4 rounded-xl font-semibold hover:bg-white/50 transition-all duration-300">
+            Schedule Consultation
+          </a>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="flex flex-wrap gap-3 text-sm">
+          <span class="bg-slate-900 text-white px-3 py-1.5 rounded-full font-medium">Langflow</span>
+          <span class="bg-blue-100 text-blue-800 px-3 py-1.5 rounded-full font-medium">AstraDB</span>
+          <span class="bg-purple-100 text-purple-800 px-3 py-1.5 rounded-full font-medium">Gemimi</span>
+          <span class="bg-green-100 text-green-800 px-3 py-1.5 rounded-full font-medium">OpenAI GPT-4</span>
+          
+        </div>
+      </div>
+      
+      <div class="relative animate-float">
+        <div class="card glass rounded-3xl p-8 border border-white/20">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+            <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+            <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+            <span class="ml-auto text-sm font-medium text-slate-600">Live RAG Demo</span>
+          </div>
+          
+          <div class="code-block mb-6">
+            <div class="text-green-400"># Enterprise RAG Pipeline</div>
+            <div class="text-blue-400">from</div> <div class="text-yellow-400">langflow</div> <div class="text-blue-400">import</div> <div class="text-white">RAGChain</div>
+            <div class="text-blue-400">from</div> <div class="text-yellow-400">astradb</div> <div class="text-blue-400">import</div> <div class="text-white">VectorStore</div>
+            <br/>
+            <div class="text-white">query = </div><div class="text-green-300">"How do I apply for annual leave?"</div>
+            <div class="text-white">response = rag.search_and_generate(query)</div>
+            <div class="text-gray-400"># → Returns policy with citations</div>
+          </div>
+          
+          <div class="bg-white rounded-2xl p-4 border border-slate-200">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
+                <span class="text-blue-600 text-xs">🤖</span>
+              </div>
+              <span class="font-semibold text-sm">HR Assistant</span>
+              <span class="ml-auto text-xs text-slate-500">Online</span>
+            </div>
+            <div class="text-sm text-slate-700 leading-relaxed">
+              Based on your Employee Handbook (Section 4.2), you can apply for annual leave through the HR portal. You're entitled to <strong>25 days per year</strong>, and requests should be submitted <strong>2 weeks in advance</strong>.
+            </div>
+            <div class="mt-2 text-xs text-slate-500">
+              📄 Source: Employee_Handbook_2024.pdf, Page 23
+            </div>
+          </div>
+          
+          <div class="mt-6 grid grid-cols-2 gap-3">
+            <a href="#projects" class="bg-slate-900 text-white text-center py-3 rounded-xl font-semibold hover:bg-slate-800 transition-colors">
+              Try Live Demos
+            </a>
+            <a href="#process" class="border border-slate-300 text-center py-3 rounded-xl font-semibold hover:border-slate-400 transition-colors">
+              See How It Works
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expertise -->
+  <section id="expertise" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl lg:text-5xl font-black mb-6">Core Expertise</h2>
+        <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+          Specialized in building production-ready RAG systems that integrate seamlessly with enterprise workflows
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-8">
+        <!-- RAG Architecture -->
+        <div class="card bg-gradient-to-br from-blue-50 to-indigo-100 rounded-3xl p-8 border border-blue-200">
+          <div class="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center mb-6">
+            <span class="text-white text-xl">🏗️</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">RAG Architecture</h3>
+          <p class="text-slate-600 mb-6">
+            Design and implement scalable retrieval-augmented generation pipelines with hybrid search capabilities and intelligent chunking strategies.
+          </p>
+          <ul class="text-sm text-slate-700 space-y-2">
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>
+              Hybrid Search (Vector + BM25)
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>
+              Multi-modal Document Processing
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>
+              Citation & Source Tracking
+            </li>
+          </ul>
+        </div>
+
+        <!-- Langflow Mastery -->
+        <div class="card bg-gradient-to-br from-purple-50 to-pink-100 rounded-3xl p-8 border border-purple-200">
+          <div class="w-12 h-12 bg-purple-600 rounded-2xl flex items-center justify-center mb-6">
+            <span class="text-white text-xl">⚡</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Langflow </h3>
+          <p class="text-slate-600 mb-6">
+            New platform in visual flow design and deployment of complex AI workflows with custom components and enterprise integrations.
+          </p>
+          <ul class="text-sm text-slate-700 space-y-2">
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 bg-purple-600 rounded-full"></span>
+              Custom Component Development
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 bg-purple-600 rounded-full"></span>
+              API Integration & Deployment
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 bg-purple-600 rounded-full"></span>
+              Performance Optimization
+            </li>
+          </ul>
+        </div>
+
+        <!-- Enterprise Integration -->
+        <div class="card bg-gradient-to-br from-green-50 to-emerald-100 rounded-3xl p-8 border border-green-200">
+          <div class="w-12 h-12 bg-green-600 rounded-2xl flex items-center justify-center mb-6">
+            <span class="text-white text-xl">🔗</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Enterprise Integration</h3>
+          <p class="text-slate-600 mb-6">
+            Seamless integration with existing systems, SSO authentication, and compliance with enterprise security standards.
+          </p>
+          <ul class="text-sm text-slate-700 space-y-2">
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 bg-green-600 rounded-full"></span>
+              Website & Portal Embedding
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 bg-green-600 rounded-full"></span>
+              SSO & Access Control
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 bg-green-600 rounded-full"></span>
+              Analytics & Monitoring
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-end justify-between mb-16">
+        <div>
+          <h2 class="text-4xl lg:text-5xl font-black mb-4">Featured Projects</h2>
+          <p class="text-xl text-slate-600">Enterprise-grade RAG implementations solving real business problems</p>
+        </div>
+        <a href="#contact" class="hidden lg:flex items-center gap-2 text-blue-700 hover:text-blue-800 font-semibold">
+          Available for new projects
+          <span class="transform transition-transform group-hover:translate-x-1">→</span>
+        </a>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-8 mb-12">
+        <!-- E-learning AI Tutor -->
+        <article class="card glass rounded-3xl p-8 border border-white/20">
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 bg-blue-600 rounded-xl flex items-center justify-center">
+                <span class="text-white text-sm">📚</span>
+              </div>
+              <span class="text-sm font-semibold text-blue-700 bg-blue-50 px-3 py-1 rounded-full">Education • RAG</span>
+            </div>
+            <div class="flex items-center gap-1 text-sm text-green-600 font-medium">
+              <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+              Live Demo
+            </div>
+          </div>
+          
+          <h3 class="text-2xl font-bold mb-4">AI-Powered Learning Assistant</h3>
+          <p class="text-slate-600 mb-6">
+            Intelligent tutoring system that answers student questions by retrieving from course materials, lecture notes, and textbooks. Supports learners to provide learning path recommendations.
+          </p>
+
+          <!-- Impact Metrics -->
+          <div class="grid grid-cols-3 gap-4 mb-6">
+            <div class="text-center bg-white/50 rounded-xl p-3">
+              <div class="text-lg font-bold text-blue-600">94%</div>
+              <div class="text-xs text-slate-600">Answer Accuracy</div>
+            </div>
+            <div class="text-center bg-white/50 rounded-xl p-3">
+              <div class="text-lg font-bold text-green-600">0.3s</div>
+              <div class="text-xs text-slate-600">Avg Response</div>
+            </div>
+            <div class="text-center bg-white/50 rounded-xl p-3">
+              <div class="text-lg font-bold text-purple-600">500+</div>
+              <div class="text-xs text-slate-600">Daily Queries</div>
+            </div>
+          </div>
+
+          <!-- Tech Stack -->
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="text-xs bg-slate-900 text-white px-2.5 py-1 rounded-full">Langflow</span>
+            <span class="text-xs bg-blue-100 text-blue-800 px-2.5 py-1 rounded-full">AstraDB</span>
+            <span class="text-xs bg-green-100 text-green-800 px-2.5 py-1 rounded-full">Gemini</span>
+          
+          </div>
+
+          <div class="aspect-video rounded-2xl bg-gradient-to-br from-blue-100 to-purple-100 mb-6 flex items-center justify-center">
+            <div class="text-center text-slate-600">
+              <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-3">
+                <span class="text-2xl">🤖</span>
+              </div>
+              <div class="font-medium">Interactive Learning Interface</div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-3">
+            <a href="https://hvuminh02.github.io/E-train/" class="flex items-center gap-2 bg-blue-600 text-white px-4 py-2.5 rounded-xl font-semibold hover:bg-blue-700 transition-colors">
+              🚀 Live Demo
+            </a>
+            <a href="https://github.com/hvuminh02/E-train" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-300 font-semibold hover:border-slate-400 transition-colors">
+              💻 GitHub
+            </a>
+            <button class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-300 font-semibold hover:border-slate-400 transition-colors" data-modal="modal-elearn">
+              🏗️ Architecture
+            </button>
+          </div>
+        </article>
+
+        <!-- Travel Agency Assistant -->
+        <article class="card glass rounded-3xl p-8 border border-white/20">
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 bg-green-600 rounded-xl flex items-center justify-center">
+                <span class="text-white text-sm">✈️</span>
+              </div>
+              <span class="text-sm font-semibold text-green-700 bg-green-50 px-3 py-1 rounded-full">Travel • Enterprise</span>
+            </div>
+            <div class="flex items-center gap-1 text-sm text-green-600 font-medium">
+              <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+              Production
+            </div>
+          </div>
+          
+          <h3 class="text-2xl font-bold mb-4">Enterprise Travel Assistant</h3>
+          <p class="text-slate-600 mb-6">
+            24/7 customer support automation for travel agency handling visa requirements, tour packages, and booking policies. Reduced support tickets by 70% while maintaining high customer satisfaction.
+          </p>
+
+          <!-- Impact Metrics -->
+          <div class="grid grid-cols-3 gap-4 mb-6">
+            <div class="text-center bg-white/50 rounded-xl p-3">
+              <div class="text-lg font-bold text-green-600">70%</div>
+              <div class="text-xs text-slate-600">Ticket Reduction</div>
+            </div>
+            <div class="text-center bg-white/50 rounded-xl p-3">
+              <div class="text-lg font-bold text-blue-600">4.8★</div>
+              <div class="text-xs text-slate-600">User Rating</div>
+            </div>
+            <div class="text-center bg-white/50 rounded-xl p-3">
+              <div class="text-lg font-bold text-purple-600">24/7</div>
+              <div class="text-xs text-slate-600">Availability</div>
+            </div>
+          </div>
+
+          <!-- Tech Stack -->
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="text-xs bg-slate-900 text-white px-2.5 py-1 rounded-full">Langflow</span>
+            <span class="text-xs bg-purple-100 text-purple-800 px-2.5 py-1 rounded-full">AstraDB</span>
+            <span class="text-xs bg-blue-100 text-blue-800 px-2.5 py-1 rounded-full">Gemini</span>
+            <span class="text-xs bg-green-100 text-green-800 px-2.5 py-1 rounded-full">WordPress</span>
+          </div>
+
+          <div class="aspect-video rounded-2xl bg-gradient-to-br from-green-100 to-blue-100 mb-6 flex items-center justify-center">
+            <div class="text-center text-slate-600">
+              <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-3">
+                <span class="text-2xl">🌍</span>
+              </div>
+              <div class="font-medium">Travel Support Dashboard</div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-3">
+            <a href="https://hvuminh02.github.io/Travela/" class="flex items-center gap-2 bg-green-600 text-white px-4 py-2.5 rounded-xl font-semibold hover:bg-green-700 transition-colors">
+              🚀 Live Demo
+            </a>
+            <a href="https://github.com/hvuminh02/Travela" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-300 font-semibold hover:border-slate-400 transition-colors">
+              📊 Github
+            </a>
+            <button class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-300 font-semibold hover:border-slate-400 transition-colors" data-modal="modal-travel">
+              🏗️ Architecture
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <!-- Third Project -->
+      <div class="grid lg:grid-cols-2 gap-8">
+        <article class="card glass rounded-3xl p-8 border border-white/20">
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 bg-purple-600 rounded-xl flex items-center justify-center">
+                <span class="text-white text-sm">👥</span>
+              </div>
+              <span class="text-sm font-semibold text-purple-700 bg-purple-50 px-3 py-1 rounded-full">HR • Internal</span>
+            </div>
+            <div class="flex items-center gap-1 text-sm text-red-600 font-medium">
+              <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+              Still on process
+            </div>
+          </div>
+          
+          <h3 class="text-2xl font-bold mb-4">HR Policy Navigator</h3>
+          <p class="text-slate-600 mb-6">
+            Internal HR assistant providing instant answers about company policies, benefits, and procedures. Features secure authentication and audit trails for compliance.
+          </p>
+
+          <!-- Impact Metrics -->
+          <div class="grid grid-cols-3 gap-4 mb-6">
+            <div class="text-center bg-white/50 rounded-xl p-3">
+              <div class="text-lg font-bold text-purple-600">85%</div>
+              <div class="text-xs text-slate-600">Query Resolution</div>
+            </div>
+            <div class="text-center bg-white/50 rounded-xl p-3">
+              <div class="text-lg font-bold text-blue-600">200+</div>
+              <div class="text-xs text-slate-600">Daily Users</div>
+            </div>
+            <div class="text-center bg-white/50 rounded-xl p-3">
+              <div class="text-lg font-bold text-green-600">SOC2</div>
+              <div class="text-xs text-slate-600">Compliant</div>
+            </div>
+          </div>
+
+          <!-- Tech Stack -->
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="text-xs bg-slate-900 text-white px-2.5 py-1 rounded-full">Langflow</span>
+            <span class="text-xs bg-purple-100 text-purple-800 px-2.5 py-1 rounded-full">Weaviate</span>
+            <span class="text-xs bg-red-100 text-red-800 px-2.5 py-1 rounded-full">Auth0</span>
+            <span class="text-xs bg-yellow-100 text-yellow-800 px-2.5 py-1 rounded-full">Audit Logs</span>
+          </div>
+
+          <div class="aspect-video rounded-2xl bg-gradient-to-br from-purple-100 to-pink-100 mb-6 flex items-center justify-center">
+            <div class="text-center text-slate-600">
+              <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-3">
+                <span class="text-2xl">🏢</span>
+              </div>
+              <div class="font-medium">HR Policy Interface</div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-3">
+            <a href="#" class="flex items-center gap-2 bg-purple-600 text-white px-4 py-2.5 rounded-xl font-semibold hover:bg-purple-700 transition-colors">
+              🔐 Secure Demo
+            </a>
+            <a href="#" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-300 font-semibold hover:border-slate-400 transition-colors">
+              📋 Compliance
+            </a>
+            <button class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-300 font-semibold hover:border-slate-400 transition-colors" data-modal="modal-hr">
+              🏗️ Architecture
+            </button>
+          </div>
+        </article>
+
+        <!-- Process Overview -->
+        <div class="card glass rounded-3xl p-8 border border-white/20">
+          <h3 class="text-2xl font-bold mb-4">Why Choose My RAG Solutions?</h3>
+          <div class="space-y-4">
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                <span class="text-white text-sm">⚡</span>
+              </div>
+              <div>
+                <div class="font-semibold mb-1">Production-Ready</div>
+                <div class="text-sm text-slate-600">Not just demos - fully deployed systems handling real user traffic with monitoring and analytics</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 bg-green-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                <span class="text-white text-sm">🎯</span>
+              </div>
+              <div>
+                <div class="font-semibold mb-1">Domain Expertise</div>
+                <div class="text-sm text-slate-600">Proven success across Education, Travel, HR, and Enterprise Knowledge Management</div>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 bg-pink-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                <span class="text-white text-sm">📈</span>
+              </div>
+              <div>
+                <div class="font-semibold mb-1">Measurable Impact</div>
+                <div class="text-sm text-slate-600">Clear metrics: 70% ticket reduction, 95% accuracy, sub-3s response times</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="process" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl lg:text-5xl font-black mb-6">My RAG Development Process</h2>
+        <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+          A proven 5-stage methodology that ensures your RAG system delivers accurate answers and scales with your business
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-5 gap-8">
+        <!-- Step 1 -->
+        <div class="card bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-6 border border-blue-200 relative">
+          <div class="absolute -top-4 left-6">
+            <div class="w-8 h-8 bg-blue-600 rounded-xl flex items-center justify-center">
+              <span class="text-white font-bold text-sm">1</span>
+            </div>
+          </div>
+          <div class="pt-4">
+            <h3 class="text-lg font-bold mb-3">Discovery & Analysis</h3>
+            <ul class="text-sm text-slate-700 space-y-2">
+              <li>• Document audit & classification</li>
+              <li>• User journey mapping</li>
+              <li>• Query pattern analysis</li>
+              <li>• Success metrics definition</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="card bg-gradient-to-br from-green-50 to-green-100 rounded-3xl p-6 border border-green-200 relative">
+          <div class="absolute -top-4 left-6">
+            <div class="w-8 h-8 bg-green-600 rounded-xl flex items-center justify-center">
+              <span class="text-white font-bold text-sm">2</span>
+            </div>
+          </div>
+          <div class="pt-4">
+            <h3 class="text-lg font-bold mb-3">Data Preparation</h3>
+            <ul class="text-sm text-slate-700 space-y-2">
+              <li>• Smart chunking strategies</li>
+              <li>• Metadata enrichment</li>
+              <li>• Quality validation</li>
+              <li>• Source attribution setup</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="card bg-gradient-to-br from-purple-50 to-purple-100 rounded-3xl p-6 border border-purple-200 relative">
+          <div class="absolute -top-4 left-6">
+            <div class="w-8 h-8 bg-purple-600 rounded-xl flex items-center justify-center">
+              <span class="text-white font-bold text-sm">3</span>
+            </div>
+          </div>
+          <div class="pt-4">
+            <h3 class="text-lg font-bold mb-3">Pipeline Development</h3>
+            <ul class="text-sm text-slate-700 space-y-2">
+              <li>• Langflow architecture design</li>
+              <li>• Hybrid search implementation</li>
+              <li>• Prompt engineering</li>
+              <li>• Response optimization</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="card bg-gradient-to-br from-pink-50 to-pink-100 rounded-3xl p-6 border border-pink-200 relative">
+          <div class="absolute -top-4 left-6">
+            <div class="w-8 h-8 bg-pink-600 rounded-xl flex items-center justify-center">
+              <span class="text-white font-bold text-sm">4</span>
+            </div>
+          </div>
+          <div class="pt-4">
+            <h3 class="text-lg font-bold mb-3">Testing & Validation</h3>
+            <ul class="text-sm text-slate-700 space-y-2">
+              <li>• Accuracy benchmarking</li>
+              <li>• Performance testing</li>
+              <li>• User acceptance testing</li>
+              <li>• Edge case handling</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="card bg-gradient-to-br from-orange-50 to-orange-100 rounded-3xl p-6 border border-orange-200 relative">
+          <div class="absolute -top-4 left-6">
+            <div class="w-8 h-8 bg-orange-600 rounded-xl flex items-center justify-center">
+              <span class="text-white font-bold text-sm">5</span>
+            </div>
+          </div>
+          <div class="pt-4">
+            <h3 class="text-lg font-bold mb-3">Deploy & Monitor</h3>
+            <ul class="text-sm text-slate-700 space-y-2">
+              <li>• Production deployment</li>
+              <li>• Analytics integration</li>
+              <li>• Continuous monitoring</li>
+              <li>• Performance optimization</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metrics & Impact -->
+  <section id="metrics" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl lg:text-5xl font-black mb-6">Proven Results</h2>
+        <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+          Real metrics from production deployments showing measurable business impact
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-4 gap-6">
+        <div class="card glass rounded-3xl p-8 text-center border border-white/20">
+          <div class="text-4xl font-black gradient-text mb-2">95%</div>
+          <div class="font-semibold text-slate-900 mb-1">Query Accuracy</div>
+          <div class="text-sm text-slate-600">Across all deployed systems</div>
+        </div>
+        <div class="card glass rounded-3xl p-8 text-center border border-white/20">
+          <div class="text-4xl font-black gradient-text mb-2">&lt;3s</div>
+          <div class="font-semibold text-slate-900 mb-1">Response Time</div>
+          <div class="text-sm text-slate-600">Average query processing</div>
+        </div>
+        <div class="card glass rounded-3xl p-8 text-center border border-white/20">
+          <div class="text-4xl font-black gradient-text mb-2">70%</div>
+          <div class="font-semibold text-slate-900 mb-1">Cost Reduction</div>
+          <div class="text-sm text-slate-600">In customer support</div>
+        </div>
+        <div class="card glass rounded-3xl p-8 text-center border border-white/20">
+          <div class="text-4xl font-black gradient-text mb-2">24/7</div>
+          <div class="font-semibold text-slate-900 mb-1">Availability</div>
+          <div class="text-sm text-slate-600">Zero-downtime deployments</div>
+        </div>
+      </div>
+
+      <!-- Client Testimonial -->
+      
+    </div>
+  </section>
+
+  <!-- Resume/Hire Me -->
+  <section id="resume" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl lg:text-5xl font-black text-center mb-16">Ready to Hire</h2>
+      
+      <div class="grid lg:grid-cols-3 gap-8">
+        <!-- Value Proposition -->
+        <div class="card glass rounded-3xl p-8 border border-white/20">
+          <h3 class="text-xl font-bold mb-4">What You Get</h3>
+          <ul class="space-y-3 text-slate-700">
+            <li class="flex items-start gap-3">
+              <span class="w-5 h-5 bg-green-500 rounded-full flex-shrink-0 mt-0.5 text-white text-xs flex items-center justify-center">✓</span>
+              <span><strong>Enterprise-grade RAG systems</strong> that scale from MVP to production</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-5 h-5 bg-green-500 rounded-full flex-shrink-0 mt-0.5 text-white text-xs flex items-center justify-center">✓</span>
+              <span><strong>Proven track record</strong> with measurable business impact</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-5 h-5 bg-green-500 rounded-full flex-shrink-0 mt-0.5 text-white text-xs flex items-center justify-center">✓</span>
+              <span><strong>Full-stack integration</strong> from data pipeline to user interface</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-5 h-5 bg-green-500 rounded-full flex-shrink-0 mt-0.5 text-white text-xs flex items-center justify-center">✓</span>
+              <span><strong>Documentation & knowledge transfer</strong> for your team</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Experience Summary -->
+        <div class="card glass rounded-3xl p-8 border border-white/20">
+          <h3 class="text-xl font-bold mb-4">Experience Highlights</h3>
+          <div class="space-y-4">
+            <div class="border-l-4 border-blue-500 pl-4">
+              <div class="font-semibold">AI Workflow Developer</div>
+              <div class="text-sm text-slate-600">Specialized in RAG systems & chatbots</div>
+              <div class="text-sm text-blue-600 mt-1">12+ production deployments</div>
+            </div>
+            <div class="border-l-4 border-purple-500 pl-4">
+              <div class="font-semibold">Langflow</div>
+              <div class="text-sm text-slate-600">Visual AI workflow design & optimization</div>
+              <div class="text-sm text-purple-600 mt-1"></div>
+            </div>
+            
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="card glass rounded-3xl p-8 border border-white/20">
+          <h3 class="text-xl font-bold mb-4">Let's Connect</h3>
+          <div class="space-y-4">
+            <a href="#" class="flex items-center gap-3 text-slate-700 hover:text-blue-600 transition-colors">
+              <span class="w-8 h-8 bg-blue-100 rounded-xl flex items-center justify-center">🌐</span>
+              <div>
+                <div class="font-medium">Portfolio</div>
+                <div class="text-sm text-slate-500">https://hvuminh02.wixsite.com/portfolio</div>
+              </div>
+            </a>
+            <a href="#" class="flex items-center gap-3 text-slate-700 hover:text-blue-600 transition-colors">
+              <span class="w-8 h-8 bg-slate-100 rounded-xl flex items-center justify-center">💻</span>
+              <div>
+                <div class="font-medium">GitHub</div>
+                <div class="text-sm text-slate-500">https://github.com/hvuminh02</div>
+              </div>
+            </a>
+            <a href="#" class="flex items-center gap-3 text-slate-700 hover:text-blue-600 transition-colors">
+              <span class="w-8 h-8 bg-blue-100 rounded-xl flex items-center justify-center">💼</span>
+              <div>
+                <div class="font-medium">LinkedIn</div>
+                <div class="text-sm text-slate-500">https://www.linkedin.com/in/hvuminh02/</div>
+              </div>
+            </a>
+            <a href="mailto:minh@example.com" class="flex items-center gap-3 text-slate-700 hover:text-blue-600 transition-colors">
+              <span class="w-8 h-8 bg-green-100 rounded-xl flex items-center justify-center">📧</span>
+              <div>
+                <div class="font-medium">Email</div>
+                <div class="text-sm text-slate-500">hvuminh02@gmail.com</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-4xl lg:text-5xl font-black mb-6">
+            Ready to Transform Your
+            <span class="gradient-text">Knowledge Base?</span>
+          </h2>
+          <p class="text-xl text-slate-300 leading-relaxed mb-8">
+            Let's discuss how a custom RAG solution can reduce your support costs, improve user experience, and unlock the value in your enterprise knowledge.
+          </p>
+          
+          <!-- Benefits -->
+          <div class="space-y-4 mb-8">
+            <div class="flex items-center gap-3">
+              <span class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-sm">✓</span>
+              <span class="text-slate-300">Free consultation & ROI assessment</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-sm">✓</span>
+              <span class="text-slate-300">Rapid prototyping within 1 week</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-sm">✓</span>
+              <span class="text-slate-300">Full deployment & training included</span>
+            </div>
+          </div>
+
+          <!-- Availability -->
+          <div class="inline-flex items-center gap-3 bg-green-900/30 border border-green-500/30 rounded-2xl px-6 py-3">
+            <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+            <span class="text-green-200 font-medium">Available for new projects • Starting September 2025</span>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="card glass-dark rounded-3xl p-8 border border-white/10">
+          <form class="space-y-6" onsubmit="event.preventDefault(); showSuccessMessage();">
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label class="text-sm font-medium text-slate-300 block mb-2" for="fname">First Name</label>
+                <input id="fname" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="John" />
+              </div>
+              <div>
+                <label class="text-sm font-medium text-slate-300 block mb-2" for="lname">Last Name</label>
+                <input id="lname" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Doe" />
+              </div>
+            </div>
+            
+            <div>
+              <label class="text-sm font-medium text-slate-300 block mb-2" for="company">Company</label>
+              <input id="company" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Acme Corp" />
+            </div>
+            
+            <div>
+              <label class="text-sm font-medium text-slate-300 block mb-2" for="email">Email</label>
+              <input id="email" type="email" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="john@acmecorp.com" />
+            </div>
+            
+            <div>
+              <label class="text-sm font-medium text-slate-300 block mb-2" for="project">Project Type</label>
+              <select id="project" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                <option value="">Select project type...</option>
+                <option value="customer-support">Customer Support Automation</option>
+                <option value="internal-kb">Internal Knowledge Base</option>
+                <option value="document-qa">Document Q&A System</option>
+                <option value="training-tutor">Training & Education</option>
+                <option value="other">Other / Custom</option>
+              </select>
+            </div>
+            
+            <div>
+              <label class="text-sm font-medium text-slate-300 block mb-2" for="message">Tell me about your project</label>
+              <textarea id="message" rows="4" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none" placeholder="Describe your current challenges, document types, expected users, and success criteria..."></textarea>
+            </div>
+            
+            <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+              Send Project Inquiry
+            </button>
+            
+            <div class="text-center text-sm text-slate-400">
+              I'll respond within 24 hours with a detailed project plan
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modals -->
+  <div id="modal-elearn" class="fixed inset-0 hidden items-center justify-center bg-black/70 p-4 z-50">
+    <div class="card bg-white rounded-3xl max-w-5xl w-full p-8 relative max-h-[90vh] overflow-y-auto">
+      <button class="absolute right-6 top-6 text-slate-500 hover:text-slate-700 text-2xl" data-close>×</button>
+      <h4 class="text-2xl font-bold mb-6">E-learning RAG Architecture</h4>
+      <div class="aspect-video bg-slate-100 rounded-2xl mb-6 flex items-center justify-center">
+        <div class="text-center text-slate-600">
+          <div class="w-20 h-20 bg-blue-100 rounded-3xl flex items-center justify-center mx-auto mb-4">
+            <span class="text-3xl">🏗️</span>
+          </div>
+          <div class="font-medium">Langflow Architecture Diagram</div>
+          <div class="text-sm text-slate-500 mt-1">Document Processing → Vector Store → Hybrid Search → LLM Generation</div>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6 text-sm">
+        <div>
+          <h5 class="font-semibold mb-2">Data Pipeline</h5>
+          <ul class="text-slate-600 space-y-1">
+            <li>• PDF text extraction with OCR fallback</li>
+            <li>• Intelligent chunking (1000 tokens, 200 overlap)</li>
+            <li>• Multilingual embeddings (Vietnamese + English)</li>
+            <li>• ChromaDB storage with metadata indexing</li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-semibold mb-2">Retrieval & Generation</h5>
+          <ul class="text-slate-600 space-y-1">
+            <li>• Hybrid search (semantic + BM25)</li>
+            <li>• Re-ranking with cross-encoder</li>
+            <li>• GPT-4 with educational prompt templates</li>
+            <li>• Citation tracking and source attribution</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-travel" class="fixed inset-0 hidden items-center justify-center bg-black/70 p-4 z-50">
+    <div class="card bg-white rounded-3xl max-w-5xl w-full p-8 relative max-h-[90vh] overflow-y-auto">
+      <button class="absolute right-6 top-6 text-slate-500 hover:text-slate-700 text-2xl" data-close>×</button>
+      <h4 class="text-2xl font-bold mb-6">Travel Agency RAG Architecture</h4>
+      <div class="aspect-video bg-slate-100 rounded-2xl mb-6 flex items-center justify-center">
+        <div class="text-center text-slate-600">
+          <div class="w-20 h-20 bg-green-100 rounded-3xl flex items-center justify-center mx-auto mb-4">
+            <span class="text-3xl">🌍</span>
+          </div>
+          <div class="font-medium">Enterprise Travel Support System</div>
+          <div class="text-sm text-slate-500 mt-1">Multi-source Knowledge → Weaviate → Intent Classification → Response Generation</div>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6 text-sm">
+        <div>
+          <h5 class="font-semibold mb-2">Knowledge Sources</h5>
+          <ul class="text-slate-600 space-y-1">
+            <li>• Travel policies & procedures</li>
+            <li>• Visa requirements database</li>
+            <li>• Tour packages & pricing</li>
+            <li>• FAQ and troubleshooting guides</li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-semibold mb-2">Enterprise Features</h5>
+          <ul class="text-slate-600 space-y-1">
+            <li>• Intent classification for routing</li>
+            <li>• Multi-language support (EN, VI, TH)</li>
+            <li>• Escalation to human agents</li>
+            <li>• Analytics dashboard for insights</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-hr" class="fixed inset-0 hidden items-center justify-center bg-black/70 p-4 z-50">
+    <div class="card bg-white rounded-3xl max-w-5xl w-full p-8 relative max-h-[90vh] overflow-y-auto">
+      <button class="absolute right-6 top-6 text-slate-500 hover:text-slate-700 text-2xl" data-close>×</button>
+      <h4 class="text-2xl font-bold mb-6">HR Policy RAG Architecture</h4>
+      <div class="aspect-video bg-slate-100 rounded-2xl mb-6 flex items-center justify-center">
+        <div class="text-center text-slate-600">
+          <div class="w-20 h-20 bg-purple-100 rounded-3xl flex items-center justify-center mx-auto mb-4">
+            <span class="text-3xl">🏢</span>
+          </div>
+          <div class="font-medium">Secure HR Policy System</div>
+          <div class="text-sm text-slate-500 mt-1">Auth Gateway → Policy Documents → Secure Search → Audited Responses</div>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6 text-sm">
+        <div>
+          <h5 class="font-semibold mb-2">Security & Compliance</h5>
+          <ul class="text-slate-600 space-y-1">
+            <li>• SSO authentication (Auth0)</li>
+            <li>• Role-based access control</li>
+            <li>• Audit logging for all queries</li>
+            <li>• SOC2 Type II compliant</li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-semibold mb-2">Policy Coverage</h5>
+          <ul class="text-slate-600 space-y-1">
+            <li>• Leave policies & procedures</li>
+            <li>• Benefits & compensation</li>
+            <li>• Code of conduct & compliance</li>
+            <li>• Expense & travel policies</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Message Modal -->
+  <div id="success-modal" class="fixed inset-0 hidden items-center justify-center bg-black/70 p-4 z-50">
+    <div class="card bg-white rounded-3xl max-w-md w-full p-8 text-center">
+      <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+        <span class="text-green-600 text-2xl">✓</span>
+      </div>
+      <h4 class="text-xl font-bold mb-2">Message Sent Successfully!</h4>
+      <p class="text-slate-600 mb-6">Thank you for your interest. I'll review your project requirements and get back to you within 24 hours with a detailed proposal.</p>
+      <button onclick="hideSuccessMessage()" class="bg-blue-600 text-white px-6 py-2 rounded-xl font-semibold hover:bg-blue-700 transition-colors">
+        Close
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-12 bg-slate-900 border-t border-slate-800 text-center">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-2">
+          <span class="font-black text-2xl text-white">Minh<span class="gradient-text">AI</span></span>
+          <span class="text-slate-400">•</span>
+          <span class="text-slate-400">RAG Systems Specialist</span>
+        </div>
+        <div class="flex items-center gap-6 text-slate-400 text-sm">
+          <a href="https://hvuminh02.wixsite.com/portfolio" class="hover:text-white transition-colors">Portfolio</a>
+          <a href="https://github.com/hvuminh02" class="hover:text-white transition-colors">GitHub</a>
+          <a href="https://www.linkedin.com/in/hvuminh02/" class="hover:text-white transition-colors">LinkedIn</a>
+          <a href="hvuminh02@gmail.com" class="hover:text-white transition-colors">Email</a>
+        </div>
+      </div>
+      <div class="mt-8 pt-8 border-t border-slate-800 text-slate-500 text-sm">
+        © <span id="year"></span> Hoang Vu Minh. Transforming enterprise knowledge into intelligent conversations.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Modal functionality
+    const openButtons = document.querySelectorAll('[data-modal]');
+    const closeButtons = document.querySelectorAll('[data-close]');
+
+    openButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.getAttribute('data-modal');
+        const el = document.getElementById(id);
+        if (el) { 
+          el.classList.remove('hidden'); 
+          el.classList.add('flex'); 
+          document.body.style.overflow = 'hidden';
+        }
+      });
+    });
+
+    closeButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const parent = btn.closest('[id^="modal-"]');
+        if (parent) { 
+          parent.classList.add('hidden'); 
+          parent.classList.remove('flex'); 
+          document.body.style.overflow = 'auto';
+        }
+      });
+    });
+
+    // Close on backdrop click
+    document.querySelectorAll('[id^="modal-"]').forEach(modal => {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) { 
+          modal.classList.add('hidden'); 
+          modal.classList.remove('flex'); 
+          document.body.style.overflow = 'auto';
+        }
+      });
+    });
+
+    // Success message functions
+    function showSuccessMessage() {
+      const modal = document.getElementById('success-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function hideSuccessMessage() {
+      const modal = document.getElementById('success-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Add scroll effect to header
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 100) {
+        header.style.background = 'rgba(255,255,255,0.95)';
+      } else {
+        header.style.background = 'rgba(255,255,255,0.85)';
+      }
+    });
+
+    // Typing animation for hero section
+    const texts = [
+      "Enterprise Knowledge Assistant",
+      "Intelligent Document Q&A",
+      "24/7 Customer Support",
+      "Internal Policy Navigator"
+    ];
+    let textIndex = 0;
+    let charIndex = 0;
+    const typingElement = document.querySelector('.typing-animation');
+    
+    if (typingElement) {
+      function typeText() {
+        if (charIndex < texts[textIndex].length) {
+          typingElement.textContent += texts[textIndex].charAt(charIndex);
+          charIndex++;
+          setTimeout(typeText, 100);
+        } else {
+          setTimeout(eraseText, 2000);
+        }
+      }
+      
+      function eraseText() {
+        if (charIndex > 0) {
+          typingElement.textContent = texts[textIndex].substring(0, charIndex - 1);
+          charIndex--;
+          setTimeout(eraseText, 50);
+        } else {
+          textIndex = (textIndex + 1) % texts.length;
+          setTimeout(typeText, 500);
+        }
+      }
+      
+      // Start the typing animation
+      setTimeout(typeText, 1000);
+    }
+  </script>
+</body>
+</html>
